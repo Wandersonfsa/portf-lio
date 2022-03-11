@@ -5,6 +5,30 @@
 * {
     margin: 0;
     padding: 0%;
+    list-style: none; /*retira os marcadores de todos os elementos, dos li por exemplo*/
+    text-decoration: none; /*retira o sublinhado dos elementos*/
+}
+
+.menu-top {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100; /*define a profundidade do item*/
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 1px black ;
+
+
 }
 
 header {
@@ -51,7 +75,7 @@ header {
     font-weight: 200;
     text-shadow: .3rem .4rem 2px rgba(0.0.0.0); /* sombra do texto*/
     margin-bottom: 2 rem;
-    animation: moveBanner 4s;
+    animation: moveBanner 4s forwards;
 }
 
 .banner p {
@@ -60,7 +84,7 @@ header {
     font-size: 2rem;
     text-shadow: .3rem .4rem 2px rgba(0.0.0.0);
     margin-bottom: 2rem;
-    animation: moveBanner 4s;
+    animation: moveBanner 4s forwards;
 }
 
 .banner button{
@@ -75,7 +99,7 @@ header {
     letter-spacing: .1rem;
     border-radius: 5px;
     cursor: pointer;
-    animation: moveBanner 4s;
+    animation: moveBanner 4s forwards;
 }
 
 .banner button:hover{ /* define o que acontece com botao quando se está com o mouse em cima*/
@@ -91,3 +115,22 @@ header {
     }
 }
 
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.menu {
+    position: relative;
+    top: 150px;
+    left: 80px;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center;
+}
